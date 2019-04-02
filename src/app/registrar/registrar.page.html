@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar color='dark'>
+      <ion-title text-center>Registrar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-item text-center>
+      <ion-label>
+        <ion-icon class="logo" color="light"
+                  name="attach">
+        </ion-icon> 
+      </ion-label>
+    </ion-item>
+    <h1>Meu aplicativo</h1>
+  
+    <ion-grid>
+
+        <ion-row class="inputStyle">
+            <ion-icon name="person"></ion-icon>
+            <ion-input type="nome"> Nome</ion-input>
+        </ion-row>
+
+      <ion-row class="inputStyle">
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="email"> Email</ion-input>
+      </ion-row>
+  
+      <ion-row class="inputStyle">
+          <ion-icon name="key"></ion-icon>
+          <ion-input type="key"> Senha</ion-input>
+      </ion-row>
+
+
+    </ion-grid>
+  
+  
+    <ion-button style="margin-top: 20px" fill="outline" shape="round"  color="light" expand="block">Registrar</ion-button>
+    <ion-button fill="outline" shape="round"  color="light" expand="block" routerLink="/login">Voltar</ion-button>
+  
+  </ion-content>
+  
