@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { EntrarPage } from './entrar.page';
 
+import { ComponentsModule } from '../components/components.module';
+
+
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +23,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [EntrarPage]

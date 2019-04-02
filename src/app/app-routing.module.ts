@@ -16,9 +16,9 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'entrar', loadChildren: './entrar/entrar.module#EntrarPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'entrar', loadChildren: './entrar/entrar.module#EntrarPageModule' },
   { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' }
-
 
 ];
 
