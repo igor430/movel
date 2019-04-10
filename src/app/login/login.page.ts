@@ -14,7 +14,10 @@ export class LoginPage implements OnInit {
 
   constructor(private authservice: AuthService, public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+  
   onSubmitLogin(){
     this.authservice.login(this.email, this.password).then(res => {
       this.router.navigate(['/entrar']);
