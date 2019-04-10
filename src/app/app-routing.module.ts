@@ -19,8 +19,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'entrar', loadChildren: './entrar/entrar.module#EntrarPageModule' },
   { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' },
-  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
-
+  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
 
 
 

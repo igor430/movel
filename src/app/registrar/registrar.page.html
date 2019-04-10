@@ -18,7 +18,7 @@
 
         <ion-row class="inputStyle">
             <ion-icon name="person"></ion-icon>
-          <ion-input type="nome"[(ngModel)]="displayName"></ion-input>
+          <ion-input type="text"[(ngModel)]="displayname"></ion-input>
         </ion-row>
 
       <ion-row class="inputStyle">
@@ -34,7 +34,7 @@
     </ion-grid>
   
   
-    <ion-button style="margin-top: 20px" fill="outline" shape="round"  color="light" expand="block" (onClick)="registrar()">Registrar</ion-button>
+    <ion-button style="margin-top: 20px" fill="outline" shape="round"  color="light" expand="block" (click)="register()">Registrar</ion-button>
     <ion-button fill="outline" shape="round"  color="light" expand="block" routerLink="/login">Voltar</ion-button>
   
   </ion-content>
