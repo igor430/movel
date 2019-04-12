@@ -16,6 +16,10 @@ export class MenuPage implements OnInit {
     {
       title: 'Segunda Página',
       url: '/menu/segunda'
+    },
+    {
+      title: 'Logout',
+      url: '/pages/login'
     }
   ];
 
