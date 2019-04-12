@@ -10,13 +10,20 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class MenuPage implements OnInit {
 
   pages = [
+
+    {
+      title: 'Home',
+      url: '/menu/home',
+      icon: 'home'
+    },
+
     {
       title: 'Perfil',
-      url: '/menu/primeira',
+      url: '/menu/perfil',
       icon: 'person'
     },
     {
-      title: 'Segunda Página',
+      title: 'Histórico',
       url: '/menu/segunda',
       icon: 'paper'
     }

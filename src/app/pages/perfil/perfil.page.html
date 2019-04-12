@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="user-photo" padding-top>
+      <ion-avatar>
+        <img src="assets/icon/Cila.jpg">
+       
+      </ion-avatar>
+    </div>
+
+    <ion-row>
+        <ion-col col-3>
+          <ion-item>
+            <ion-input type="text" placeholder="Nome"> </ion-input>
+          </ion-item>
+        </ion-col>
+ 
+      </ion-row>
+
+      <ion-row>
+          <ion-col size="3">
+            <ion-item>
+              <ion-input type="tel" placeholder="DDD" [brmasker]="{mask:'00', len:2}"> </ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-12>
+            <ion-item>
+              <ion-input type="tel" placeholder="Telefone" [brmasker]="{mask:'(00) 00000-0000', len:15}">  </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col size="5">
+              <ion-item>
+                <ion-input type="text" placeholder="CPF" [brmasker]="{mask:'000.000.000-00', len:14}"> </ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-12>
+              <ion-item >
+                <ion-input type="text" placeholder="País">  </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col col-3>
+                <ion-item>
+                  <ion-input type="text" placeholder="Email" > </ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+ <ion-button style="margin-top: 20px" 
+            color="primary" > 
+            Alterar
+</ion-button>
+
+
+  </ion-content>

@@ -12,9 +12,15 @@ const routes: Routes = [
     path: 'menu',
     component: MenuPage,
     children:[
+
       {
-        path: 'primeira',
-        loadChildren: '../primeira/primeira.module#PrimeiraPageModule'
+        path:'home',
+        loadChildren: '../home/home.module#HomePageModule'
+      },
+
+      {
+        path: 'perfil',
+        loadChildren: '../perfil/perfil.module#PerfilPageModule'
       },
       {
         path: 'segunda',
@@ -24,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/menu/primeira'
+    redirectTo: '/menu/home'
   }
 ];
 
