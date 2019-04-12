@@ -23,7 +23,16 @@
               <ion-icon [name]="p.icon"> </ion-icon> &nbsp; {{ p.title }}
           </ion-item>
         </ion-menu-toggle>
-          <ion-button style="float: right" (click)="logout()">Logout</ion-button>
+   
+        <ion-menu-toggle auto-hit="false">
+          
+          <ion-item (click)="logout()">
+             <ion-icon name="log-out"></ion-icon> 
+             <ion-text color="danger">Logout</ion-text>   
+          </ion-item>
+      
+        </ion-menu-toggle>
+
       </ion-list>
     </ion-content>
 
