@@ -3,16 +3,24 @@
   <ion-menu contentId="content">
 
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
+      <ion-toolbar color='stable'>
+
+          <ion-avatar class="avatar">
+              <img src="assets/icon/Cila.jpg">
+              <ion-text style="text-align: center">
+                  <h6> Nome </h6>
+                </ion-text>
+          </ion-avatar>
+
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
+
       <ion-list>
         <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
           <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath === p.url">
-            {{ p.title }}
+              <ion-icon [name]="p.icon"> </ion-icon> &nbsp; {{ p.title }}
           </ion-item>
         </ion-menu-toggle>
           <ion-button style="float: right" (click)="logout()">Logout</ion-button>
