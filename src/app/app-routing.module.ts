@@ -8,9 +8,23 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   
-  { path: 'pages/login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'pages/registrar', loadChildren: './pages/registrar/registrar.module#RegistrarPageModule' },
-  { path: 'pages/menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { 
+    path: 'pages/login', 
+    loadChildren: './pages/login/login.module#LoginPageModule' 
+  },
+  { 
+    path: 'pages/registrar', 
+    loadChildren: './pages/registrar/registrar.module#RegistrarPageModule' 
+  },
+ // { path: 'pages/primeira', loadChildren: './pages/primeira/primeira.module#PrimeiraPageModule' },
+  { 
+    path: '', 
+    loadChildren: './pages/menu/menu.module#MenuPageModule' 
+  }
+ // { path: 'segunda', loadChildren: './pages/segunda/segunda.module#SegundaPageModule' }
+
+  //{ path: '', loadChildren: './pages/login/login.module#LoginPageModule' }
+
 
 ];
 

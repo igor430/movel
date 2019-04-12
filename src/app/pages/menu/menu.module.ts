@@ -13,18 +13,18 @@ const routes: Routes = [
     component: MenuPage,
     children:[
       {
-        path: 'entrar',
-        loadChildren: '/pages/entrar/entrar.module#EntrarPageModule'
+        path: 'primeira',
+        loadChildren: '../primeira/primeira.module#PrimeiraPageModule'
       },
       {
-        path: 'paginafeed',
-        loadChildren: '/pages/paginafeed/paginafeed.module#PaginafeedPageModule'
+        path: 'segunda',
+        loadChildren: '../segunda/segunda.module#SegundaPageModule'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/menu'
+    redirectTo: '/menu/primeira'
   }
 ];
 

@@ -10,12 +10,12 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'Entrar',
-      url: '/menu/entrar'
+      title: 'Perfil',
+      url: '/menu/primeira'
     },
     {
-      title: 'Feed',
-      url: '/menu/paginafeed'
+      title: 'Segunda Página',
+      url: '/menu/segunda'
     }
   ];
 
