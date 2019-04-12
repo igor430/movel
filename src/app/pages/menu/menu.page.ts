@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-menu',
@@ -16,22 +17,24 @@ export class MenuPage implements OnInit {
     {
       title: 'Segunda Página',
       url: '/menu/segunda'
-    },
-    {
-      title: 'Logout',
-      url: '/pages/login'
     }
+
   ];
 
   selectPath = '';
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private AFauth: AngularFireAuth) { 
     this.router.events.subscribe((event: RouterEvent) => {
       this.selectPath = event.url;
     });
   }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.AFauth.auth.signOut();
+    this.router.navigate(['/pages/login']);
   }
 
 }
