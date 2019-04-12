@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthSeviceService } from './../services/auth-sevice.service';
+import { AuthSeviceService } from './../../services/auth-sevice.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,7 +20,7 @@ export class RegistrarPage implements OnInit {
 
   register(){
     this.authService.register(this.displayname, this.email, this.password).then(res => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/pages/login']);
     });
   }
 

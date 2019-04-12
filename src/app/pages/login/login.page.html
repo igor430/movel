@@ -23,12 +23,25 @@
 
     <ion-row class="inputStyle">
         <ion-icon name="key"></ion-icon>
-        <ion-input type="passsword" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-row>
+
   </ion-grid>
 
+  <ion-button style="margin-top: 20px" 
+              fill="outline" 
+              shape="round"  
+              color="light" 
+              expand="block" 
+              (click)="onSubmitLogin()">
+              Entrar
+  </ion-button>
 
-  <ion-button style="margin-top: 20px" fill="outline" shape="round"  color="light" expand="block" (click)="onSubmitLogin()">Entrar</ion-button>
-  <ion-button fill="outline" shape="round"  color="light" expand="block" routerLink="/registrar">Registrar</ion-button>
-
+  <ion-button fill="outline" 
+              shape="round"  
+              color="light" 
+              expand="block" 
+              routerLink="/pages/registrar">
+              Registrar
+  </ion-button>
 </ion-content>

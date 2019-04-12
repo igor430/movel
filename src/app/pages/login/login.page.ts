@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './../services/auth.service';
+import { AuthService } from './../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   
   onSubmitLogin(){
     this.authservice.login(this.email, this.password).then(res => {
-      this.router.navigate(['/entrar']);
+      this.router.navigate(['/pages/primeira']);
     }).catch(err => alert('Dados incorretos'));
   }
 

@@ -4,22 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'pages/login',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
-  },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
   
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'entrar', loadChildren: './entrar/entrar.module#EntrarPageModule' },
-  { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' },
-  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },  
+  { path: 'pages/login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'pages/registrar', loadChildren: './pages/registrar/registrar.module#RegistrarPageModule' },
+  { path: 'pages/menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
 
 ];
 

@@ -14,7 +14,7 @@ export class AuthService {
   }
   logout(){
     this.AFauth.auth.signOut();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/pages/login']);
   }
   register(displayname: string, email: string, password: string){
     this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res => {

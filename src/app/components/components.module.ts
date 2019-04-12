@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { MenuComponent } from './menu/menu.component';
 import { ExampleComponent } from './example/example.component';
 
 @NgModule({
-    declarations: [ MenuComponent, ExampleComponent],
-    exports: [ MenuComponent, ExampleComponent]
+    declarations: [  ExampleComponent],
+    exports: [ ExampleComponent]
 })
 
 export class ComponentsModule{}

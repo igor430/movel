@@ -9,8 +9,22 @@ import { MenuPage } from './menu.page';
 
 const routes: Routes = [
   {
+    path: 'menu',
+    component: MenuPage,
+    children:[
+      {
+        path: 'entrar',
+        loadChildren: '/pages/entrar/entrar.module#EntrarPageModule'
+      },
+      {
+        path: 'paginafeed',
+        loadChildren: '/pages/paginafeed/paginafeed.module#PaginafeedPageModule'
+      }
+    ]
+  },
+  {
     path: '',
-    component: MenuPage
+    redirectTo: '/menu'
   }
 ];
 
