@@ -7,7 +7,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { PerfilPage } from './perfil.page';
 
-import { BrMaskerModule } from 'brmasker-ionic-3';
+import { BrMaskerModule } from 'br-mask';
+
+
+
 
 const routes: Routes = [
   {
@@ -21,9 +24,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    BrMaskerModule
-  ],
+    RouterModule.forChild(routes)
+    ],
   declarations: [PerfilPage]
 })
 export class PerfilPageModule {}

@@ -22,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     ComponentsModule,
     RouterModule.forChild(routes)
+    
   ],
   declarations: [RegistrarPage]
 })

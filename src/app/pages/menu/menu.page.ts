@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
+
+  userNome:string;
 
   pages = [
 
@@ -32,13 +36,15 @@ export class MenuPage implements OnInit {
 
   selectPath = '';
 
-  constructor(private router: Router, private AFauth: AngularFireAuth) { 
+  constructor(private router: Router, private AFauth: AngularFireAuth, private authService:AuthSeviceService,) { 
     this.router.events.subscribe((event: RouterEvent) => {
       this.selectPath = event.url;
     });
   }
 
   ngOnInit() {
+    this.userNome = this.authService.getNome();
+
   }
 
   logout(){

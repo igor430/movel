@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthSeviceService } from './../../services/auth-sevice.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-registrar',
   templateUrl: './registrar.page.html',
