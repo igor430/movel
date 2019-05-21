@@ -23,9 +23,14 @@ const routes: Routes = [
         loadChildren: '../perfil/perfil.module#PerfilPageModule'
       },
       {
+        path: 'comunidade',
+        loadChildren: '../comunidade/comunidade.module#ComunidadePageModule'
+      },
+      {
         path: 'segunda',
         loadChildren: '../segunda/segunda.module#SegundaPageModule'
-      }
+      },
+
     ]
   },
   {

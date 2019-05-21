@@ -17,18 +17,13 @@ const routes: Routes = [
     path: 'pages/registrar', 
     loadChildren: './pages/registrar/registrar.module#RegistrarPageModule' 
   },
- // { path: 'pages/primeira', loadChildren: './pages/primeira/primeira.module#PrimeiraPageModule' },
+  
   { 
     path: '', 
     loadChildren: './pages/menu/menu.module#MenuPageModule', 
     canActivate: [ AuthGuard ]
-  },
-
- // { path: 'segunda', loadChildren: './pages/segunda/segunda.module#SegundaPageModule' }
-
-  //{ path: '', loadChildren: './pages/login/login.module#LoginPageModule' }
-
-
+  }
+ 
 ];
 
 @NgModule({
