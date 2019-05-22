@@ -29,15 +29,16 @@ const routes: Routes = [
       {
         path: 'segunda',
         loadChildren: '../segunda/segunda.module#SegundaPageModule'
-      },
-
+      }
     ]
   },
-  {
+ /* {
     path: '',
     redirectTo: '/menu/home'
   }
+  */
 ];
+
 
 @NgModule({
   imports: [

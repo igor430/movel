@@ -26,9 +26,8 @@ import { BrMaskerModule } from 'br-mask';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    BrMaskerModule
-  ],
+    AngularFireAuthModule
+    ],
   providers: [
     StatusBar,
     SplashScreen,

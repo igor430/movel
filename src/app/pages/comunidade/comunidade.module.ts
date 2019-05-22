@@ -8,13 +8,22 @@ import { IonicModule } from '@ionic/angular';
 import { ComunidadePage } from './comunidade.page';
 import { TabUsuariosPage } from '../tab-usuarios/tab-usuarios.page';
 import { TabOngsPage } from '../tab-ongs/tab-ongs.page';
-import { ComunidadeRoutingModule } from './comunidade-routing.module';
 
 const routes: Routes = [
   {
     path: '',
     component: ComunidadePage,
-  },
+    children: [
+      {
+      path: 'tabUsuarios',
+       loadChildren: '../tab-usuarios/tab-usuarios.module#TabUsuariosPageModule'
+      },
+      {
+        path: 'tabOngs',
+        loadChildren: '../tab-ongs/tab-ongs.module#TabOngsPageModule'
+      }
+    ]
+  }
 
 ];
 
@@ -24,7 +33,6 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    //ComunidadeRoutingModule
 
   ],
   declarations: [ComunidadePage]
