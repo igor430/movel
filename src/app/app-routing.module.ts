@@ -22,7 +22,8 @@ const routes: Routes = [
     path: '', 
     loadChildren: './pages/menu/menu.module#MenuPageModule', 
     canActivate: [ AuthGuard ]
-  }
+  },
+
  
 ];
 

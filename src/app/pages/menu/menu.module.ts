@@ -27,16 +27,18 @@ const routes: Routes = [
         loadChildren: '../comunidade/comunidade.module#ComunidadePageModule'
       },
       {
-        path: 'segunda',
-        loadChildren: '../segunda/segunda.module#SegundaPageModule'
+        path: 'historico',
+        loadChildren: '../historico/historico.module#HistoricoPageModule'
       }
     ]
   },
- /* {
+  /*
+{
     path: '',
     redirectTo: '/menu/home'
   }
   */
+  
 ];
 
 

@@ -29,10 +29,11 @@ export class MenuPage implements OnInit {
     {
       title: 'Comunidade',
       url: '/menu/comunidade',
+      icon: 'md-globe'
     },
     {
       title: 'Histórico',
-      url: '/menu/segunda',
+      url: '/menu/historico',
       icon: 'paper'
     },
 
