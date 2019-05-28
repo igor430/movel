@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterEvent } from '@angular/router';
+import { Router, RouterEvent, Routes } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
@@ -26,10 +26,12 @@ export class MenuPage implements OnInit {
       url: '/menu/perfil',
       icon: 'person'
     },
+  
     {
       title: 'Comunidade',
       url: '/menu/comunidade',
-      icon: 'md-globe'
+      icon: 'md-globe',
+      
     },
     {
       title: 'Histórico',

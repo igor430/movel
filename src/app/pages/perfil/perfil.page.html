@@ -8,17 +8,18 @@
   </ion-header>
   
   <ion-content>
+    
     <div class="user-photo" padding-top>
       <ion-avatar>
         <img src="assets/icon/Cila.jpg">
        
       </ion-avatar>
     </div>
-
+  
     <ion-row>
         <ion-col col-3>
-          <ion-item>
-            <ion-label type="text" placeholder="Nome" typeLabel="stacked"> {{ userNome }} </ion-label>
+          <ion-item >
+            <ion-label>  </ion-label>
           </ion-item>
         </ion-col>
  
@@ -27,24 +28,10 @@
       <ion-row>
           <ion-col col-12>
             <ion-item>
-              <ion-input type="tel" placeholder="Telefone"> </ion-input>
+              <ion-input type="tel" placeholder="Telefone" mask="(99) 9 9999-9999"> </ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
-
-
-        <ion-row>
-            <ion-col size="5">
-              <ion-item>
-                <ion-input type="text" placeholder="CPF"> </ion-input>
-              </ion-item>
-            </ion-col>
-            <ion-col col-12>
-              <ion-item >
-                <ion-input type="text" placeholder="CNPJ">  </ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
 
           <ion-row>
               <ion-col col-3>
@@ -53,11 +40,17 @@
                 </ion-item>
               </ion-col>
             </ion-row>
-
+<!--
+            <ion-select placeholder="Tipo de usuario" id="tipo" [(ngModel)]="usuario.verifica">
+              <ion-select-option value="1" >Ong</ion-select-option>
+              <ion-select-option value="2">Usuario Comum</ion-select-option>
+            </ion-select>
+-->
  <ion-button style="margin-top: 20px" 
-            color="primary" > 
+            color="primary" 
+            
+            (click)="add()"> 
             Alterar
 </ion-button>
-
 
   </ion-content>

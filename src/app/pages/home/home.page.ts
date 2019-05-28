@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  userPosts
+
+  constructor(private user: UsuarioService, private afs: AngularFirestore) { 
+    const posts = afs.doc('users/${user.getUID()}')
+    this.userPosts = posts.valueChanges()
+  }
 
   ngOnInit() {
   }

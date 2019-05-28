@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-comunidade',
   templateUrl: './comunidade.page.html',
@@ -10,6 +11,11 @@ export class ComunidadePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
-
+/*
+  ionViewDidEnter(){
+    console.log("página recarregada");
+  }
+*/
 }

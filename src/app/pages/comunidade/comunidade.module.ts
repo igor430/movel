@@ -6,8 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ComunidadePage } from './comunidade.page';
-import { TabUsuariosPage } from '../tab-usuarios/tab-usuarios.page';
-import { TabOngsPage } from '../tab-ongs/tab-ongs.page';
+
 
 const routes: Routes = [
   {
@@ -15,13 +14,14 @@ const routes: Routes = [
     component: ComunidadePage,
     children: [
       {
-      path: 'tabUsuarios',
+       path: 'usuarios',
        loadChildren: '../tab-usuarios/tab-usuarios.module#TabUsuariosPageModule'
       },
       {
-        path: 'tabOngs',
+        path: 'ongs',
         loadChildren: '../tab-ongs/tab-ongs.module#TabOngsPageModule'
-      }
+      },
+      
     ]
   }
 

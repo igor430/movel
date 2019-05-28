@@ -11,18 +11,29 @@
 
         <ion-row class="inputStyle">
             <ion-icon name="person"></ion-icon>
-          <ion-input placeholder="Nome" type="text"[(ngModel)]="displayname" ></ion-input>
+          <ion-input placeholder="Nome" type="text"[(ngModel)]="displayname"></ion-input>
         </ion-row>
 
       <ion-row class="inputStyle">
           <ion-icon name="mail"></ion-icon>
-          <ion-input placeholder="Email" type="email" [(ngModel)]="email"></ion-input>
+          <ion-input placeholder="Email" type="email" [(ngModel)]="email"  ></ion-input>
       </ion-row>
   
       <ion-row class="inputStyle">
           <ion-icon name="key"></ion-icon>
           <ion-input placeholder="Senha" type="password" [(ngModel)]="password"></ion-input>
       </ion-row>
+
+      <ion-select placeholder="Tipo de usuário" id="tipo" [(ngModel)]="usuario.role"  class="inputStyleSelect">
+          <ion-select-option value="false" >Ong</ion-select-option>
+          <ion-select-option value="true">Usuario Comum</ion-select-option>
+      </ion-select>
+
+      <ion-row>
+        <ion-textarea placeholder="Nos conte um pouco sobre você" class="textarea" rows="6" cols="20"
+        [(ngModel)] = usuario.sobre></ion-textarea>
+      </ion-row>
+
 
     </ion-grid>
     
@@ -31,7 +42,9 @@
                 shape="round"  
                 color="light" 
                 expand="block" 
-                (click)="register()">
+                (click)="register()
+                "
+                >
                 Registrar
     </ion-button>
     <ion-button fill="outline" 

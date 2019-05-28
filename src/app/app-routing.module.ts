@@ -23,7 +23,9 @@ const routes: Routes = [
     loadChildren: './pages/menu/menu.module#MenuPageModule', 
     canActivate: [ AuthGuard ]
   },
+  { path: 'pages/sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
 
+  { path: 'pages/sobre/:id', loadChildren: './pages/sobre/sobre.module#SobrePageModule' }
  
 ];
 

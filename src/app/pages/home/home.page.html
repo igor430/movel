@@ -11,6 +11,25 @@
 
 <ion-content padding>
 
+    <div id="images">
+
+      <div class="image" *ngFor="let post of (userPosts | async)?.posts">
+
+        <ion-card>
+          <ion-img src="https://ucarecdn.com/{{ post.image }}/-/crop/200x200/center/"></ion-img>
+        </ion-card>
+
+        <ion-content>
+          <p>{{ post.desc }}</p>
+        </ion-content>
+
+      </div>
+
+    </div>
+</ion-content>
+
+    <!--
+
     <div class="ion-padding">
 
       <ion-card class="card">
@@ -116,3 +135,5 @@
       </ion-fab-button>
 
 </ion-content>
+
+-->
