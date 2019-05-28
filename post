@@ -1,0 +1,214 @@
+[33mcommit 51a1f8bf705db45f5fbd63768d92be3dc004946e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 28 18:06:59 2019 -0400
+
+    post
+
+[33mcommit 428141f458ca1b6d18b508460958dd8f8a9ad3d4[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 28 01:54:12 2019 -0400
+
+     muita coisa por que esqueci de commitar antes
+
+[33mcommit 79d0f4109a9d506ffe691f5d378358b0411f9973[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 21 21:55:09 2019 -0400
+
+    historico
+
+[33mcommit 29c380663b46947374d939ea0bb08bbdee1808de[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 21 20:28:02 2019 -0400
+
+    comunidade fix
+
+[33mcommit 14effe40c267e5aac59a6ed20118b31ac33f3cc2[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 21 17:53:43 2019 -0400
+
+    comunidade
+
+[33mcommit 60de703f9a243153c5b0f70f1a6f7a27e19a75d6[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Sun May 19 20:14:22 2019 -0400
+
+    home page
+
+[33mcommit bc80e3f442ce745be9fcd66c16b25e6a00d2ea1c[m
+Author: Alatrar <48738558+Alatrar@users.noreply.github.com>
+Date:   Tue May 14 20:05:10 2019 -0400
+
+    Update README.md
+
+[33mcommit 63f3e9fb44914ea826097065385fa2b9abdb7660[m
+Merge: 027401b c0f7cac
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 14 19:59:41 2019 -0400
+
+    Merge branch 'master' of https://github.com/igor430/movel
+
+[33mcommit 027401b8c54f328749391d666dde64a3bbb75239[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 14 19:59:14 2019 -0400
+
+    retirei a mascara bugada
+
+[33mcommit c0f7cac7538c2ab3e75902b330fbcae4f2b6f647[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Tue May 7 19:45:50 2019 -0400
+
+    Update README.md
+
+[33mcommit f122711fb728181b2efb9e6b457d9d25cef0ec4c[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Tue May 7 19:39:46 2019 -0400
+
+    Update README.md
+
+[33mcommit 937c83beedfb348aa1d9d2fe052fc230360e7385[m
+Merge: d778127 294d674
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 7 18:13:44 2019 -0400
+
+    Merge branch 'master' of https://github.com/igor430/movel
+
+[33mcommit d7781271015269f7b8bfdd6658b59c95d098729e[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue May 7 18:13:19 2019 -0400
+
+    perfil
+
+[33mcommit 294d67428c78dd45d1c87f6c63df8ef731f0a289[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 16 20:39:51 2019 -0400
+
+    botao homepage adicionar
+
+[33mcommit 99c0a05936abda0e92b786cd62d0ccb25b8b192a[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Fri Apr 12 17:56:29 2019 -0400
+
+    Update README.md
+
+[33mcommit f431f3c84def81f629ab6021e11fb9d963b2e6a3[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Fri Apr 12 17:56:15 2019 -0400
+
+    Instalar
+    
+    npm install brmasker-ionic-3 --save
+
+[33mcommit 17803879243bce43325c84db0e750f2720a08b83[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 17:30:52 2019 -0400
+
+     perfil e bloqueio de rotas
+
+[33mcommit 174d8384e160b218e32d080128d08c1796ead3c2[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 14:38:10 2019 -0400
+
+    layout registrar, futuramente trocar o componente dos field
+
+[33mcommit fce45ce5a6d2c539e35044242bdb9f5bf771369b[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 13:50:50 2019 -0400
+
+    logo do aplicativo, mas deve ser alterada futuramente
+
+[33mcommit 98901bc1f07ef518a7dc2f39816641fccf8ca045[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 12:17:23 2019 -0400
+
+    alteracao logout
+
+[33mcommit 80f8634915a46f5f9d2cd6513d394d443b536f43[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 06:01:43 2019 -0400
+
+    avatar no side menu e algumas config css
+
+[33mcommit 9c9b4a7b5a7b2d8d8695b3dcea2c5fa36c42488a[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 04:49:26 2019 -0400
+
+    nova funcao logout
+
+[33mcommit f7973282604ce3cf47c4723d8e1eacb55bd81fdf[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 04:28:46 2019 -0400
+
+    logout
+
+[33mcommit 7512c3d119cad45e7626c28b8d8bd512ef271acb[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 04:14:40 2019 -0400
+
+    menu
+
+[33mcommit 83177955dbf1160dc643663d46479eba2191a3ae[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Fri Apr 12 03:01:29 2019 -0400
+
+    alteracoes em todas as paginas e rotas do projeto
+
+[33mcommit e7628edac9da17f9271cd68fe2b8e993bfe7166b[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Thu Apr 11 16:02:55 2019 -0400
+
+     correcao de todos os erros
+
+[33mcommit 363bb4160a63ff529d89a54dc46e77bc3569cf7f[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 9 21:32:27 2019 -0400
+
+    page1 teste
+
+[33mcommit 08bb39a3aaa8b2dc89072316fb0c137e56cb27c6[m
+Merge: ed083c7 f36d76f
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 9 21:21:08 2019 -0400
+
+    Merge branch 'master' of https://github.com/igor430/movel
+
+[33mcommit ed083c783e2de65cd1693cf592aec9040ab2a2fc[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 9 21:18:43 2019 -0400
+
+    registro de usuario
+
+[33mcommit f36d76feec4f197ed8f298a8c54ee6c408690b24[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Tue Apr 9 19:53:09 2019 -0400
+
+    Delete teste
+
+[33mcommit edb09be8d42af39c85fbb43ce96d400639741a31[m
+Author: igor430 <48738076+igor430@users.noreply.github.com>
+Date:   Tue Apr 9 19:51:32 2019 -0400
+
+    Create teste
+
+[33mcommit 212ed2ef52b9c9243f2cf3ad6344a9e1832e5b0a[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 9 19:35:13 2019 -0400
+
+    segundo commit
+
+[33mcommit b96b036518e841f5c60fc07962c7519849f1b659[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 2 17:44:15 2019 -0400
+
+    rota
+
+[33mcommit acb5b9018b5f1eedd8e81fe48ae18c604e563a76[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 2 17:40:37 2019 -0400
+
+    menu
+
+[33mcommit 5fb8e497545b87ee399cce6bcae42d9e2b000077[m
+Author: Igor Roberto <igor.rob6@gmail.com>
+Date:   Tue Apr 2 15:31:02 2019 -0400
+
+    teste
