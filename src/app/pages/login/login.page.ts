@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
   onSubmitLogin(){
 
     this.authservice.login(this.email, this.password).then(res => {
-      this.router.navigate(['/menu/perfil']);
+      this.router.navigate(['/menu/home']);
     }).catch(err => alert('Dados incorretos'));
   }
 

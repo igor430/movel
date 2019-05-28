@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { UsuarioPost } from '../model/usuario.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +12,20 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class HomePage implements OnInit {
 
-  userPosts
+  usuarioP: UsuarioPost[];
 
-  constructor(private user: UsuarioService, private afs: AngularFirestore) { 
-    const posts = afs.doc('users/${user.getUID()}')
-    this.userPosts = posts.valueChanges()
+  constructor(
+    private usuarioService:UsuarioService,
+
+  ) { 
+
   }
 
   ngOnInit() {
-  }
+    this.usuarioService.getUsuarioPost().subscribe(res => {
+      this.usuarioP = res
+    })
+    }
+  
 
 }

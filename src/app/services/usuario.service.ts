@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { UsuarioI } from '../pages/model/usuario.interface';
+import { UsuarioI, UsuarioPost } from '../pages/model/usuario.interface';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthSeviceService } from './auth-sevice.service';
 
@@ -20,6 +20,9 @@ export class UsuarioService {
 
   private usuarioSobre: AngularFirestoreCollection<UsuarioI['sobre']>;
   private usuarioS: Observable<UsuarioI[]>;
+
+  private usuarioCollectionPost: AngularFirestoreCollection<UsuarioPost>;
+  private usuarioP: Observable<UsuarioPost[]>;
 
   constructor(
     private db:AngularFirestore,
@@ -40,6 +43,17 @@ export class UsuarioService {
 
     this.usuarioSobre = db.collection<UsuarioI['sobre']>('usuario');
     this.usuarioS = this.usuarioCollection.snapshotChanges().pipe(map(
+      actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return {id, ...data};
+        })
+      }
+    ))
+
+    this.usuarioCollectionPost = db.collection<UsuarioPost>('usuarioPost');
+    this.usuarioP = this.usuarioCollectionPost.snapshotChanges().pipe(map(
       actions => {
         return actions.map(a => {
           const data = a.payload.doc.data();
@@ -76,6 +90,23 @@ export class UsuarioService {
 
   addUsuario(usuario:UsuarioI) {    
     return this.usuarioCollection.add(usuario);
+  }
+
+  //post
+  addPost(usuarioP:UsuarioPost){
+    return this.usuarioCollectionPost.add(usuarioP);
+  }
+
+  getUsuarioP(id:string){
+    return this.usuarioCollectionPost.doc<UsuarioPost>(id).valueChanges();
+  }
+
+  updatePost(usuarioP:UsuarioPost, id:string){
+    return this.usuarioCollectionPost.doc(id).update(usuarioP);
+  }
+
+  getUsuarioPost(){
+    return this.usuarioP;
   }
 
 }

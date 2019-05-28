@@ -8,5 +8,13 @@ export interface UsuarioI {
         sobre: string
 }
 
+export interface UsuarioPost {
+        id?: string,
+        uid: string,
+        nome: string,
+        mensagem: string,
+        status: boolean
+}
+
 
       

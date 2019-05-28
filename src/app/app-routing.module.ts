@@ -25,7 +25,10 @@ const routes: Routes = [
   },
   { path: 'pages/sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
 
-  { path: 'pages/sobre/:id', loadChildren: './pages/sobre/sobre.module#SobrePageModule' }
+  { path: 'pages/sobre/:id', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
+  
+  { path: 'pages/post', loadChildren: './pages/post/post.module#PostPageModule' }
+
  
 ];
 

@@ -3,9 +3,7 @@ import { AuthSeviceService } from './../../services/auth-sevice.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UsuarioI } from '../model/usuario.interface';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { registerContentQuery } from '@angular/core/src/render3';
 import { ToastController } from '@ionic/angular';
-import { AuthService } from 'src/app/services/auth.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 
@@ -28,7 +26,6 @@ export class RegistrarPage implements OnInit {
     email: '',//this.authService.getEmail(),
     sobre: ''
     
-
   }
   
   usuarioId = null;

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Publicar</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref=""></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content padding>
+
+  <ion-textarea  class="textarea" rows="6" cols="20" [(ngModel)]="usuarioP.mensagem"></ion-textarea>
+
+  <ion-button float-right>
+    <ion-icon name="ios-attach"></ion-icon>
+  </ion-button>
+
+  <ion-item>
+        <ion-label>Status</ion-label>
+        <ion-toggle checked="false" disabled="true" [(ngModel)]="usuarioP.status"></ion-toggle>
+  </ion-item>
+
+</ion-content>
+
+<ion-fab-button class="fab" (click)="publicar()" routerLink="/menu/home">
+  <ion-icon name="ios-checkmark"></ion-icon>
+</ion-fab-button>
