@@ -30,27 +30,16 @@
           
         </ion-card>
       </div> 
-      
-      <!--
-          <div class="ion-padding">
-              <ion-card class="card">
-                <ion-card-header>
-                  <ion-card-title> Nome do usuario</ion-card-title>
-                  <ion-card-subtitle> Subtitulo </ion-card-subtitle>
-                </ion-card-header>
-        
-                <ion-card-content>
-                    Pura sorte ou obra divina, o acaso não deixa de ser
-                    incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
-                </ion-card-content>
 
-                <img src="assets/imagens/mesa.jpg">
-                <ion-card-content>
-                    Status:<ion-label color="danger"> Pendente</ion-label>
-                  </ion-card-content>
-              </ion-card>
-            </div>
-        -->
-    <ion-fab-button class="todo-fab" routerLink="/pages/post">
-        <ion-icon name="add"></ion-icon>
+  <div *ngFor="let usuario of usuarios" >
+
+    <ion-item *ngIf="usuario.role == 'false'">
+      
+    <ion-fab-button  class="todo-fab" routerLink="/pages/post" >
+        <ion-icon name="add" ></ion-icon>
       </ion-fab-button>
+
+    </ion-item>
+  </div>
+
+  </ion-content>

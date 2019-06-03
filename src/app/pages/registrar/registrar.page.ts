@@ -54,25 +54,26 @@ export class RegistrarPage implements OnInit {
   async register(){
     
     this.authService.register(this.displayname, this.email, this.password).then(res => {
+      if(this.usuarioId) {      
+        this.usuario.uid
+        this.usuarioService.update(this.usuario, this.usuarioId);      
+      }
+      else {
+        this.usuarioService.addUsuario(this.usuario);
+      }
+      
       this.router.navigate(['/pages/login']);
-    }).catch(err => alert('Email ja cadastrado'))
-
-    //try{}
-    
-    if(this.usuarioId) {      
-      this.usuarioService.update(this.usuario, this.usuarioId);      
-    }
-    else {
-      this.usuarioService.addUsuario(this.usuario);
-    }
-    
+    }).then(async res =>{
       let toast = await this.toastController.create({
-      message: 'Usuário cadastrado',
-      duration: 3000,
-    });   
-  
-      toast.present(); 
+        message: 'Usuário cadastrado',
+        duration: 3000,
+      });   
+        toast.present(); 
+
+    }).catch(err => alert('Email ja cadastrado'));  
+      
        
+      
   }
   
 }

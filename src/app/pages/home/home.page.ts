@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { UsuarioPost } from '../model/usuario.interface';
-import { ActivatedRoute } from '@angular/router';
+import { UsuarioPost, UsuarioI } from '../model/usuario.interface';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HomePage implements OnInit {
 
   usuarioP: UsuarioPost[];
+
+  usuarios: UsuarioI[];
 
   constructor(
     private usuarioService:UsuarioService,
@@ -25,6 +25,13 @@ export class HomePage implements OnInit {
     this.usuarioService.getUsuarioPost().subscribe(res => {
       this.usuarioP = res
     })
+
+    this.usuarioService.getUsuarios().subscribe(res => {
+      this.usuarios = res
+    })
+    }
+    ionViewWillEnter(){
+      console.log("pagina home");
     }
   
 
