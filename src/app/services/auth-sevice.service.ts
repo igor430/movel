@@ -37,11 +37,10 @@ export class AuthSeviceService {
 
   register(displayname: string, email: string, password: string){
     return this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res => {
-      res.user.updateProfile({displayName: displayname});
-      console.log(res.user.uid)
+      console.log(res.user.displayName)
       console.log(res.user.email)
+      console.log(res.user.uid)
     });
-
-
   }
+
 }

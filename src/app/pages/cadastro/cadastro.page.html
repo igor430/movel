@@ -1,0 +1,34 @@
+<ion-content padding>
+
+<h4>Concluir cadastro</h4>
+
+<ion-grid>
+
+    <ion-row class="inputStyle">
+        <ion-icon name="person"></ion-icon>
+        <ion-input placeholder="Nome" type="text" [(ngModel)]="usuario.nome"></ion-input>
+    </ion-row>
+
+  <ion-select placeholder="Tipo de usuário" id="tipo" [(ngModel)]="usuario.role"  class="inputStyleSelect">
+      <ion-select-option value="2" >Ong</ion-select-option>
+      <ion-select-option value="1">Usuario Comum</ion-select-option>
+  </ion-select>
+
+  <ion-row>
+    <ion-textarea placeholder="Nos conte um pouco sobre você" class="textarea" rows="6" cols="20"
+    [(ngModel)] = "usuario.sobre"></ion-textarea>
+  </ion-row>
+
+</ion-grid>
+
+<ion-button style="margin-top: 20px" 
+            fill="outline" 
+            shape="round"  
+            color="light" 
+            expand="block" 
+            (click)="cadastro()"
+            >
+            Concluir
+</ion-button>
+
+</ion-content>

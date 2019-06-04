@@ -14,10 +14,9 @@ export class SobrePage implements OnInit {
   sobreid: null;
 
    usuarioS: UsuarioI = {
-        role: true,
+        role: 1,
         uid: '',
         nome: '',
-        email: '',
         sobre: ''
   }
   

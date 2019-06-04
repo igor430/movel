@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { UsuarioPost, UsuarioI } from '../model/usuario.interface';
+import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
+import { TabUsuariosPage } from '../tab-usuarios/tab-usuarios.page';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +16,14 @@ export class HomePage implements OnInit {
 
   usuarios: UsuarioI[];
 
+  status = false;
+
+  role = false;
+
   constructor(
     private usuarioService:UsuarioService,
+    private authService: AuthSeviceService
+
 
   ) { 
 

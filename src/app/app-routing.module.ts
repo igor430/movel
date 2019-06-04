@@ -27,7 +27,9 @@ const routes: Routes = [
 
   { path: 'pages/sobre/:id', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
   
-  { path: 'pages/post', loadChildren: './pages/post/post.module#PostPageModule' }
+  { path: 'pages/post', loadChildren: './pages/post/post.module#PostPageModule' },
+  { path: 'pages/cadastro', loadChildren: './pages/cadastro/cadastro.module#CadastroPageModule' }
+
 
  
 ];

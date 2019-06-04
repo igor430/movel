@@ -17,17 +17,7 @@ export class RegistrarPage implements OnInit {
   displayname: string;
   email: string;
   password: string;
-  
-  usuario: UsuarioI = {
 
-    role: true, //true = usuario normal
-    nome: '',//this.authService.getNome(),
-    uid: '',//this.authService.getUid(),
-    email: '',//this.authService.getEmail(),
-    sobre: ''
-    
-  }
-  
   usuarioId = null;
 
   constructor(
@@ -42,50 +32,14 @@ export class RegistrarPage implements OnInit {
 
   ngOnInit() {
 
-    this.usuarioId = this.route.snapshot.params['id'];
-    if (this.usuarioId) {
-      this.usuarioService.getUsuario(this.usuarioId).subscribe(res => {
-        this.usuario = res;
-      })
-    }
-    
+  
   }
 
-  async register(){
+  register(){
     
     this.authService.register(this.displayname, this.email, this.password).then(res => {
-      if(this.usuarioId) {      
-        this.usuario.uid
-        this.usuarioService.update(this.usuario, this.usuarioId);      
-      }
-      else {
-        this.usuarioService.addUsuario(this.usuario);
-      }
-      
-      this.router.navigate(['/pages/login']);
-    }).then(async res =>{
-      let toast = await this.toastController.create({
-        message: 'Usuário cadastrado',
-        duration: 3000,
-      });   
-        toast.present(); 
-
+      this.router.navigate(['/pages/cadastro']);
     }).catch(err => alert('Email ja cadastrado'));  
-      
-       
-      
   }
   
 }
-
-  /*
-    async emailCadatrado(){
-      let toast = await this.toastController.create({
-        message: 'Este email ja foi cadastrado',
-        duration: 3000,
-      });
-          return toast.present(); 
-    }
-  */
-
-

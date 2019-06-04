@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { UsuarioI, UsuarioPost } from '../pages/model/usuario.interface';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthSeviceService } from './auth-sevice.service';
+import { firestore } from 'firebase';
 
 
 @Injectable({
@@ -15,6 +16,8 @@ import { AuthSeviceService } from './auth-sevice.service';
 
 export class UsuarioService {
 
+
+
   private usuarioCollection: AngularFirestoreCollection<UsuarioI>;
   private usuario: Observable<UsuarioI[]>;
 
@@ -23,6 +26,11 @@ export class UsuarioService {
 
   private usuarioCollectionPost: AngularFirestoreCollection<UsuarioPost>;
   private usuarioP: Observable<UsuarioPost[]>;
+
+
+  private usuarioCollectionPostId: AngularFirestoreCollection<UsuarioPost>;
+  private userId: Observable<UsuarioPost[]>;
+
 
   constructor(
     private db:AngularFirestore,
@@ -70,7 +78,6 @@ export class UsuarioService {
 
   getSobre(){
     return this.usuarioS;
-    //return this.usuarioSobre.doc<UsuarioI>(id).valueChanges();
   }
   getSobreid(id:string){
     return this.usuarioCollection.doc<UsuarioI>(id).valueChanges();

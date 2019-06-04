@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UsuarioPost } from '../model/usuario.interface';
 import { ToastController } from '@ionic/angular';
+import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
 
 @Component({
   selector: 'app-post',
@@ -12,11 +13,13 @@ import { ToastController } from '@ionic/angular';
 })
 export class PostPage implements OnInit {
 
+  userNome:string;
+
   usuarioP: UsuarioPost = {
 
-    nome: '',
-    uid: '',
+    nome: this.authService.getNome(),
     status: false,
+    autor: this.authService.getUid(),
     mensagem: ''
     
   }
@@ -28,10 +31,14 @@ export class PostPage implements OnInit {
     private route: ActivatedRoute,
     private db:AngularFirestore,
     public toastController: ToastController,
+    private authService: AuthSeviceService, 
+
 
   ) { }
 
   ngOnInit() {
+
+    this.userNome = this.authService.getNome();
 
     this.usuarioPost = this.route.snapshot.params['id'];
     if (this.usuarioPost) {
