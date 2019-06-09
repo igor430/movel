@@ -15,38 +15,54 @@
        
       </ion-avatar>
     </div>
+
+    <div *ngFor="let perfil of perfil" >
   
-    <ion-row>
-        <ion-col col-3>
-          <ion-item >
-            <ion-label>  </ion-label>
-          </ion-item>
-        </ion-col>
- 
-      </ion-row>
+    <ion-list >
+        <ion-item>             
+            <ion-label >
+              <p>Nome</p>
+             <h2>  {{ userNome }} </h2>  
+            </ion-label>
 
-      <ion-row>
-          <ion-col col-12>
-            <ion-item>
-              <ion-input type="tel" placeholder="Telefone" mask="(99) 9 9999-9999"> </ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+            <ion-label> 
+                <p>Apelido/Nome Fantasia</p>
+                <h2> {{ perfil.apelido }} </h2> 
+              </ion-label>
+        </ion-item>
 
-          <ion-row>
-              <ion-col col-3>
-                <ion-item>
-                  <ion-label >{{  userEmail }} </ion-label>
-                </ion-item>
-              </ion-col>
-            </ion-row>
+        <ion-item >
+            <ion-label >  
+              <p>Telefone</p>
+              <h2> {{ perfil.telefone }} </h2>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>
+              <p>Email</p>
+              <h2>{{  userEmail }} </h2> 
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label  text-wrap>
+              <p>Sobre</p>
+              <h2> {{ perfil.sobre }}</h2> 
+            </ion-label>
+        </ion-item>
+             
+    </ion-list>
+
+  </div>
+
 <!--
             <ion-select placeholder="Tipo de usuario" id="tipo" [(ngModel)]="usuario.verifica">
               <ion-select-option value="1" >Ong</ion-select-option>
               <ion-select-option value="2">Usuario Comum</ion-select-option>
             </ion-select>
 -->
- <ion-button style="margin-top: 20px" 
+ <ion-button style="margin-top: 20px; float:right" 
             color="primary" 
             
             (click)="add()"> 

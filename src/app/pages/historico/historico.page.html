@@ -11,110 +11,41 @@
   
   <ion-content padding>
 
-      <div class="ion-padding">
+      <h4 style="display:block;text-align:center">Alguma informação útil para o usuário, uma frase explicativa ou algo do gênero</h4>
+
+
+      <div style="margin-top: 10px" *ngFor="let post of usuarioP">
+
+          <ion-card class="card" *ngIf="post.autor == user">
   
-        <ion-card class="card">
-          <ion-card-header>
-            <ion-card-title> Teste titulo</ion-card-title>
-            <ion-card-subtitle> Subtitulo </ion-card-subtitle>
-          </ion-card-header>
-  
-          <ion-card-content>
-              Pura sorte ou obra divina, o acaso não deixa de ser
-              incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
-          </ion-card-content>
-  
-          <img src="assets/imagens/arroz.jpg">
-  
-          <ion-card-content>
-            Status:<ion-label color="success"> Concluído</ion-label>
-          </ion-card-content>
-        </ion-card>
-      </div>
-  
-      <div class="ion-padding">
-          <ion-card class="card">
             <ion-card-header>
-              <ion-card-title> Nome Usuario</ion-card-title>
-              <ion-card-subtitle> Subtitulo </ion-card-subtitle>
+              <span class="nomeUser">{{ post.nome }}</span>
+              <button style="float: right; background-color: transparent"  >
+                <ion-icon class="more" name="ios-more"></ion-icon>
+              </button>
+              
             </ion-card-header>
-    
+  
             <ion-card-content>
-                Pura sorte ou obra divina, o acaso não deixa de ser
-                incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
+                {{ post.mensagem }}
             </ion-card-content>
   
-            <img src="assets/imagens/leite.png">
+            <img src="assets/imagens/mesa.jpg">
   
-            <ion-card-content>
-                Status:<ion-label color="success"> Concluído</ion-label>
-              </ion-card-content>
-          </ion-card>
-        </div>
-  
-        <div class="ion-padding">
-            <ion-card class="card">
-              <ion-card-header>
-                <ion-card-title> Nome do usuario</ion-card-title>
-                <ion-card-subtitle> Subtitulo </ion-card-subtitle>
-              </ion-card-header>
-      
-              <ion-card-content>
-                  Pura sorte ou obra divina, o acaso não deixa de ser
-                  incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
-              </ion-card-content>
-  
-              <img src="assets/imagens/feijao.png">
-  
-              <ion-card-content>
-                  Status:<ion-label color="success"> Concluído</ion-label>
-                </ion-card-content>
-            </ion-card>
-          </div>
-  
-          <div class="ion-padding">
-              <ion-card class="card">
-                <ion-card-header>
-                  <ion-card-title> Nome do usuario</ion-card-title>
-                  <ion-card-subtitle> Subtitulo </ion-card-subtitle>
-                </ion-card-header>
-        
-                <ion-card-content>
-                    Pura sorte ou obra divina, o acaso não deixa de ser
-                    incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
-                </ion-card-content>
-  
-                <img src="assets/imagens/fralda.jpg">
-                <ion-card-content>
-                    Status:<ion-label color="success"> Concluído</ion-label>
-                  </ion-card-content>
-              </ion-card>
-            </div>
-  
-            <div class="ion-padding">
-                <ion-card class="card">
-                  <ion-card-header>
-                    <ion-card-title> Nome do usuario</ion-card-title>
-                    <ion-card-subtitle> Subtitulo </ion-card-subtitle>
-                  </ion-card-header>
-          
-                  <ion-card-content>
-                      Pura sorte ou obra divina, o acaso não deixa de ser
-                      incrível por ser surpreendente, aleatório, soco no estômago ou bilhete premiado.
-                  </ion-card-content>
-  
-                  <img src="assets/imagens/mesa.jpg">
-                  <ion-card-content>
-                      Status:<ion-label color="success"> Concluído</ion-label>
-                    </ion-card-content>
-                </ion-card>
+            
+          <ion-card-content >
+              <div *ngIf="post.status == concluido">
+              Status: <ion-label color="success"> Concluído </ion-label>
               </div>
-        
-  
-      <ion-fab-button class="todo-fab">
-          <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-  
+              <div *ngIf="post.status == pendente">
+                Status: <ion-label color="danger"> Pendente </ion-label>
+              </div>
+              
+
+            </ion-card-content>
+            
+          </ion-card>
+        </div> 
   </ion-content>
   
   

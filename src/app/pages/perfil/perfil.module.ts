@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PerfilPage } from './perfil.page';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AngularFirestoreModule
     ],
   declarations: [PerfilPage]
 })

@@ -11,11 +11,13 @@
 
 <ion-content padding>
 
-    <div class="ion-padding" *ngFor="let post of usuarioP" >
+  <h4 style="display:block;text-align:center">Alguma informação útil para o usuário, uma frase explicativa ou algo do gênero</h4>
 
-        <ion-card class="card">
-          <ion-card-header>
-            <ion-card-title>Nome Usuario</ion-card-title>
+    <div style="margin-top: 10px" *ngFor="let post of usuarioP">
+
+        <ion-card class="card" *ngIf="post.status == status">
+          <ion-card-header >
+            <span class="nomeUser">{{ post.nome }}</span>
           </ion-card-header>
 
           <ion-card-content>
@@ -31,15 +33,15 @@
         </ion-card>
       </div> 
 
-  <div *ngFor="let usuario of usuarios" >
+  <div *ngFor="let usuario of perfil" >
 
-    <ion-item *ngIf="usuario.role == 'false'">
+    <div *ngIf="usuario.role == 2">
       
-    <ion-fab-button  class="todo-fab" routerLink="/pages/post" >
-        <ion-icon name="add" ></ion-icon>
+      <ion-fab-button  class="todo-fab" routerLink="/pages/post" >
+          <ion-icon name="add" ></ion-icon>
       </ion-fab-button>
 
-    </ion-item>
+    </div>
   </div>
 
   </ion-content>

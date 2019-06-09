@@ -15,6 +15,9 @@ import { AuthSeviceService } from './auth-sevice.service';
 
 export class UsuarioService {
 
+  //user = this.authService.getUid();
+
+
   private usuarioCollection: AngularFirestoreCollection<UsuarioI>;
   private usuario: Observable<UsuarioI[]>;
 
@@ -23,6 +26,13 @@ export class UsuarioService {
 
   private usuarioCollectionPost: AngularFirestoreCollection<UsuarioPost>;
   private usuarioP: Observable<UsuarioPost[]>;
+
+
+  private usuarioCollectionPostId: AngularFirestoreCollection<UsuarioPost>;
+  private userId: Observable<UsuarioPost[]>;
+
+
+
 
   constructor(
     private db:AngularFirestore,
@@ -62,6 +72,7 @@ export class UsuarioService {
         })
       }
     ))
+
   }
 
   getUsuarios() {
@@ -70,7 +81,6 @@ export class UsuarioService {
 
   getSobre(){
     return this.usuarioS;
-    //return this.usuarioSobre.doc<UsuarioI>(id).valueChanges();
   }
   getSobreid(id:string){
     return this.usuarioCollection.doc<UsuarioI>(id).valueChanges();

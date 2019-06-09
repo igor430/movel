@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioI } from '../model/usuario.interface';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
 
 @Component({
   selector: 'app-sobre',
@@ -14,15 +15,13 @@ export class SobrePage implements OnInit {
   sobreid: null;
 
    usuarioS: UsuarioI = {
-        role: true,
-        uid: '',
-        nome: '',
-        email: '',
-        sobre: ''
+        role: 1,
+        uid: this.authService.getUid(),
+        apelido: '',
+        sobre: '',
+        telefone: ''
   }
   
-
-  /*usuarioS: UsuarioI['sobre'] */
 
   ngOnInit() {
 
@@ -38,7 +37,9 @@ export class SobrePage implements OnInit {
   constructor(
     private usuarioService:UsuarioService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authService: AuthSeviceService 
+
   ) { }
 
 }

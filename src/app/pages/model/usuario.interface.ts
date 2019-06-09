@@ -1,19 +1,18 @@
 export interface UsuarioI {
         id?: string,
-        //emailUsuario: string,
-        role: boolean,
+        role: number,
+        apelido: string,
+        sobre: string,
         uid: string,
-        nome: string,
-        email: string,
-        sobre: string
+        telefone: string
 }
 
 export interface UsuarioPost {
         id?: string,
-        uid: string,
         nome: string,
         mensagem: string,
-        status: boolean
+        status: boolean,
+        autor: string
 }
 
 

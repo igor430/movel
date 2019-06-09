@@ -3,11 +3,14 @@ import { AuthSeviceService } from 'src/app/services/auth-sevice.service';
 
 import { UsuarioI } from '../model/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
+import { PerfilService } from '../../services/perfil.service';
+
 import { ActivatedRoute, Router, ResolveStart } from '@angular/router';
 
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { LoadingController, NavController } from '@ionic/angular';
+
 
 
 @Component({
@@ -19,24 +22,34 @@ export class PerfilPage implements OnInit {
 
   userEmail:string;
   userNome:string;
-  userTelefone: string;
   userUid: string;
 
   usuarios: UsuarioI[];  
 
   private loading;
 
+  user = this.authService.getUid();
+
+  perfil: UsuarioI[];
+
+
+
   constructor(
     private authService:AuthSeviceService,
     private route: ActivatedRoute,
     private usuarioService:UsuarioService,
+    private usuarioServicePerfil:PerfilService,
     private db:AngularFirestore, 
     public afstore: AngularFirestore, 
     private router: Router,
     public loadingController: LoadingController,
     public navCtrl: NavController,
 
-  ){ }
+  ){
+    
+   
+   }
+
 
   ngOnInit() {
 
@@ -46,6 +59,12 @@ export class PerfilPage implements OnInit {
 
     this.usuarioService.getUsuarios().subscribe(res => {
       this.usuarios = res
+    })
+    this.usuarioService.getUsuarios().subscribe(res => {
+      this.usuarios = res
+    })
+    this.usuarioServicePerfil.getPerfil().subscribe(res => {
+      this.perfil = res
     })
   }
 
